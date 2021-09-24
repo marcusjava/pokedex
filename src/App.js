@@ -1,23 +1,39 @@
-import logo from './logo.svg';
-import './App.css';
+import React, { useEffect } from "react";
+import "./App.css";
+import { Route, Switch, Redirect } from "react-router-dom";
+import Header from "./components/header";
+import Home from "./pages/home";
+import Detail from "./pages/detail";
+import PokemonTypeList from "./pages/type-list";
+import SignInAndSignUp from "./pages/sign-in-and-sign-up";
+import { useSelector, useDispatch } from "react-redux";
+import { checkUserSession } from "./redux/user/userActions";
 
 function App() {
+  const { currentUser } = useSelector((state) => state.user);
+  const dispatch = useDispatch();
+
+  useEffect(() => {
+    dispatch(checkUserSession());
+  }, [dispatch]);
+
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <Header />
+      <div className="app-container">
+        <Switch>
+          <Route path="/" exact component={Home} />
+          <Route path="/pokemon/type/:type" component={PokemonTypeList} />
+          <Route path="/detail/:name" component={Detail} />
+          <Route
+            exact
+            path="/signin"
+            render={() =>
+              currentUser ? <Redirect to="/" /> : <SignInAndSignUp />
+            }
+          />
+        </Switch>
+      </div>
     </div>
   );
 }
