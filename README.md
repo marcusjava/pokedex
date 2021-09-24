@@ -14,6 +14,15 @@ This project was bootstrapped with [Create React App](https://github.com/faceboo
 - Firebase
 - Styled-components
 
+## Instruções de Instalação
+
+1 - Clone o repositorio
+
+`https://github.com/marcusjava/pokedex`
+
+2 - Usando Docker - Construir imagem: docker build -t nome . - Testando imagem: docker run -p 80:80 noma_imagem - Abra o navegador e digite http://localhost
+3 - Caso não queira usar o docker - npm ou yarn install para instalar as dependencias
+
 ## Available Scripts
 
 In the project directory, you can run:
