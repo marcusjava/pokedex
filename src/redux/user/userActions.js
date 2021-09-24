@@ -20,7 +20,7 @@ export const signInFailure = (error) => ({
 
 export const emailSignInStart = (emailAndPassword) => ({
   type: userConstants.EMAIL_SIGN_IN_START,
-  payload: emailSignInStart,
+  payload: emailAndPassword,
 });
 
 export const checkUserSession = () => ({

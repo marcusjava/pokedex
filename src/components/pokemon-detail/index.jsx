@@ -9,7 +9,6 @@ import {
   Description,
   Badge,
   StatsContainer,
-  Ball,
   Button,
   AbilityContainer,
 } from "./styles/pokemon-detail";

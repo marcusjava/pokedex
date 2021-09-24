@@ -22,11 +22,6 @@ const InvertedButton = css`
   }
 `;
 
-const DefaultButton = css`
-  background-color: black;
-  color: white;
-`;
-
 export const Button = styled.button`
   width: 100%;
   height: 50px;

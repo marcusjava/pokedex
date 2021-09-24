@@ -32,12 +32,6 @@ function SignUp() {
     }
   };
 
-  const clearFields = () => {
-    setDisplayName("");
-    setEmail("");
-    setPassword("");
-    setConfirmPassword("");
-  };
   return (
     <Container>
       <Title>Não possuo uma conta</Title>

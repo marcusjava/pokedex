@@ -1,13 +1,12 @@
-import React, { useState } from "react";
+import React from "react";
 import { useDispatch } from "react-redux";
 import {
   searchPokemons,
   fetchPokemonsStart,
 } from "../../redux/pokemon/pokemonActions";
-import { Container, SearchInput, Button } from "./styles/search";
+import { Container, SearchInput } from "./styles/search";
 
 function Search() {
-  const [searchInput, setSearchInput] = useState("");
   const dispatch = useDispatch();
 
   const onSearchChange = (e) => {

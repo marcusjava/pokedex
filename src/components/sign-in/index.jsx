@@ -7,7 +7,6 @@ import {
   Container,
   Title,
   SubTitle,
-  Form,
   ButtonContainer,
   ErrorMessage,
 } from "./styles/sign-in";
@@ -32,11 +31,6 @@ const SignIn = () => {
   const handleSubmit = async (e) => {
     e.preventDefault();
     dispatch(emailSignInStart({ email, password }));
-  };
-
-  const clearFields = () => {
-    setEmail("");
-    setPassword("");
   };
 
   return (

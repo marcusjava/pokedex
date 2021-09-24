@@ -1,8 +1,6 @@
-import { css } from "styled-components";
 import styled from "styled-components/macro";
 
 const sub_color = "grey";
-const main_color = "black";
 
 export const InputGroup = styled.div`
   display: flex;
