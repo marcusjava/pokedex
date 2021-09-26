@@ -45,8 +45,12 @@ export function* signInWithGoogle() {
 }
 
 export function* signInWithEmail({ payload: { email, password } }) {
-  const { user } = yield auth.signInWithEmailAndPassword(email, password);
-  yield call(getSnapshotFromUserAuth, user);
+  try {
+    const { user } = yield auth.signInWithEmailAndPassword(email, password);
+    yield call(getSnapshotFromUserAuth, user);
+  } catch (error) {
+    yield put(signInFailure(error.message));
+  }
 }
 
 //loggoff com firebase auth
