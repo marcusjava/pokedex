@@ -8,7 +8,7 @@ This project was bootstrapped with [Create React App](https://github.com/faceboo
 
 ## Projeto desenvolvido em ReactJS + firebase authentication
 
-### https://flamboyant-payne-df0c8a.netlify.app/
+### https://pokedex666.netlify.app/
 
 ## Tecnologias utilizadas
 
